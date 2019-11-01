@@ -1,10 +1,12 @@
-a=1
-for i in *.sql; do
-  NEW_SEQUENCE_NAME=$(printf "V%06d" "$a") #04 pad to length of 4
-  FILE_NAME=${i##*__}  # retain the part after the last slash
+i=1
+for FILE in *.sql; do
+  NEW_SEQUENCE_NAME=$(printf "V%06d" "$i")
+  FILE_NAME=${FILE##*__}
   NEW_FILE_NAME=$(printf "%s__%s" "$NEW_SEQUENCE_NAME" "$FILE_NAME")
 
-  mv -i -- "$i" "$NEW_FILE_NAME"
+  if [ $FILE != $NEW_FILE_NAME ]; then
+    mv -i -- "$FILE" "$NEW_FILE_NAME"
+  fi
 
-  let a=a+1
+  let i=i+1
 done
