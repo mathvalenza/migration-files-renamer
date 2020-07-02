@@ -42,7 +42,10 @@ Note that all the files after `V_000002__create_table_B.sql` were renamed to reo
 ## Run
 
 - Linux (easier way):
+
   Simply copy the content in `run.sh` and paste it on your terminal, in the directory which `.sql` files are placed.
+
 - Windows
+
   Paste `run.sh` file in the directory which `.sql` files are placed, then double-click the file.
   
