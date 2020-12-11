@@ -1,5 +1,5 @@
 # migration-files-renamer
-A sh script to rename migration files
+Just a sh script to rename migration files
 
 ## The problem
 
